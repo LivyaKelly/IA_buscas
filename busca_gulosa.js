@@ -126,4 +126,3 @@ for (let city in connections) {
 
 // Exemplo de uso: de Arad para Bucharest
 console.log(greedyBestFirstSearch(nodes["Arad"], nodes["Bucharest"]));
-

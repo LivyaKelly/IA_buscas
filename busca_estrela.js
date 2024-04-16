@@ -97,26 +97,26 @@ let pitesti = new Node("Pitesti", 100);
 
 // Distâncias e heurísticas 
 const cidades = {
-    "Arad": { heurística: 366, vizinhos: {"Zerind": 75, "Timisoara": 118, "Sibiu": 140} },
-    "Bucharest": { heurística: 0, vizinhos: {"Urziceni": 85, "Giurgiu": 90, "Pitesti": 101, "Fagaras": 211} },
-    "Craiova": { heurística: 160, vizinhos: {"Drobeta": 120, "Rimnicu Vilcea": 146, "Pitesti": 138} },
-    "Drobeta": { heurística: 242, vizinhos: {"Mehadia": 75, "Craiova": 120} },
-    "Eforie": { heurística: 161, vizinhos: {"Hirsova": 86} },
-    "Fagaras": { heurística: 176, vizinhos: {"Sibiu": 99, "Bucharest": 211} },
-    "Giurgiu": { heurística: 77, vizinhos: {"Bucharest": 90} },
-    "Hirsova": { heurística: 151, vizinhos: {"Eforie": 86, "Urziceni": 98} },
-    "Iasi": { heurística: 226, vizinhos: {"Neamt": 87, "Vaslui": 92} },
-    "Lugoj": { heurística: 244, vizinhos: {"Timisoara": 111, "Mehadia": 70} },
-    "Mehadia": { heurística: 241, vizinhos: {"Lugoj": 70, "Drobeta": 75} },
-    "Neamt": { heurística: 234, vizinhos: {"Iasi": 87} },
-    "Oradea": { heurística: 380, vizinhos: {"Zerind": 71, "Sibiu": 151} },
-    "Pitesti": { heurística: 100, vizinhos: {"Rimnicu Vilcea": 97, "Craiova": 138, "Bucharest": 101} },
-    "Rimnicu Vilcea": { heurística: 193, vizinhos: {"Sibiu": 80, "Pitesti": 97, "Craiova": 146} },
-    "Sibiu": { heurística: 253, vizinhos: {"Arad": 140, "Oradea": 151, "Fagaras": 99, "Rimnicu Vilcea": 80} },
-    "Timisoara": { heurística: 329, vizinhos: {"Arad": 118, "Lugoj": 111} },
-    "Urziceni": { heurística: 80, vizinhos: {"Bucharest": 85, "Hirsova": 98} },
-    "Vaslui": { heurística: 199, vizinhos: {"Iasi": 92, "Urziceni": 142} },
-    "Zerind": { heurística: 374, vizinhos: {"Arad": 75, "Oradea": 71} }
+    "Arad": { "heurística": 366, "vizinhos": {"Zerind": 75, "Timisoara": 118, "Sibiu": 140} },
+    "Zerind": { "heurística": 374, "vizinhos": {"Arad": 75, "Oradea": 71} },
+    "Timisoara": { "heurística": 329, "vizinhos": {"Arad": 118, "Lugoj": 111} },
+    "Sibiu": { "heurística": 253, "vizinhos": {"Arad": 140, "Oradea": 151, "Fagaras": 99, "Rimnicu Vilcea": 80} },
+    "Oradea": { "heurística": 380, "vizinhos": {"Zerind": 71, "Sibiu": 151} },
+    "Lugoj": { "heurística": 244, "vizinhos": {"Timisoara": 111, "Mehadia": 70} },
+    "Mehadia": { "heurística": 241, "vizinhos": {"Lugoj": 70, "Drobeta": 75} },
+    "Drobeta": { "heurística": 242, "vizinhos": {"Mehadia": 75, "Craiova": 120} },
+    "Craiova": { "heurística": 160, "vizinhos": {"Drobeta": 120, "Rimnicu Vilcea": 146, "Pitesti": 138} },
+    "Rimnicu Vilcea": { "heurística": 193, "vizinhos": {"Sibiu": 80, "Pitesti": 97, "Craiova": 146} },
+    "Pitesti": { "heurística": 100, "vizinhos": {"Rimnicu Vilcea": 97, "Craiova": 138, "Bucharest": 101} },
+    "Fagaras": { "heurística": 176, "vizinhos": {"Sibiu": 99, "Bucharest": 211} },
+    "Bucharest": { "heurística": 0, "vizinhos": {"Fagaras": 211, "Pitesti": 101, "Giurgiu": 90, "Urziceni": 85} },
+    "Giurgiu": { "heurística": 77, "vizinhos": {"Bucharest": 90} },
+    "Urziceni": { "heurística": 80, "vizinhos": {"Bucharest": 85, "Hirsova": 98, "Vaslui": 142} },
+    "Hirsova": { "heurística": 151, "vizinhos": {"Eforie": 86, "Urziceni": 98} },
+    "Eforie": { "heurística": 161, "vizinhos": {"Hirsova": 86} },
+    "Vaslui": { "heurística": 199, "vizinhos": {"Iasi": 92, "Urziceni": 142} },
+    "Iasi": { "heurística": 226, "vizinhos": {"Neamt": 87, "Vaslui": 92} },
+    "Neamt": { "heurística": 234, "vizinhos": {"Iasi": 87} },
 };
 
 // Construir os nós e configurar seus vizinhos
@@ -138,4 +138,3 @@ let cidadeInicial = nós[nomeCidadeInicial];
 let cidadeFinal = nós[nomeCidadeFinal];
 
 console.log(aStar(cidadeInicial, cidadeFinal));
-
